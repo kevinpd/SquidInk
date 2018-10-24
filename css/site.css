@@ -1,0 +1,265 @@
+body {
+    margin: 0 auto;
+    font-family: 'alegreya', serif;
+}
+
+
+/* Turning on border-box */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/*Skip to content button*/
+
+.accessibility {
+    position: absolute;
+    left: 42%;
+    top: -19px;
+    background: #E86829;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    border: solid 3px;
+    border-radius: 0 0 25px 25px;
+    border-top: 0;
+}
+
+.accessibility a {
+    display: inline-block;
+    padding: 10px;
+    font-family: 'Permanent Marker', cursive;
+    text-decoration: none;
+    color: #000;
+}
+
+.accessibility:hover {
+    background-color: #429FD5;
+}
+
+.accessibility a:hover {
+    color: #FFF;
+}
+
+
+/* styling everything in the header */
+
+.site-header {
+    height: 50vh;
+    background-image: url("../img/splat-bg.png");
+    background-size: cover;
+    color: #e86829;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* see and style our header content div */
+
+.site-header__content {
+    min-width: 200px;
+    text-align: center;
+}
+
+
+/* controlling the space around the (optional) paragraph under the h1 */
+
+.site-header__content p {
+    margin: 0;
+    padding: 10px 0 0 0;
+    color: #e86829;
+}
+
+
+/*styling columns to make them responsive*/
+
+.text-content {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.site-footer__container {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.main_container {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.background {
+    background-color: #BBF7FF;
+}
+
+
+/* styling links and submission points section */
+
+
+/* styling profiles of us section */
+
+.bio {
+    border: 1px solid red;
+}
+
+.bio__container {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid green;
+}
+
+
+/* let's start by creating the mobile styles */
+
+
+/* turn off margins, padding and dots for the <ul> */
+
+.bio__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+/* put a temporary(?) border around each bio and add some padding. Centre the text at small screen sizes. */
+
+.bio__person {
+    border: 1px solid blue;
+    padding: 10px;
+}
+
+.bio__person p,
+h3 {
+    text-align: center;
+}
+
+
+/* make a circular bio image. You should remove the width and height once you have real images added to your site */
+
+.bio__person img {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    /*--These need removing and images properly sized*/
+    background: white;
+    border-radius: 50%;
+}
+
+
+/* control the space around the bio heading and paragraphs */
+
+.bio__person h3 {
+    margin: 0;
+    padding: 10px 0 0 0;
+}
+
+.bio__person p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* add more padding to the paragraph with a class of description */
+
+.bio__person p.description {
+    padding: 10px 0 30px 0;
+}
+
+
+/* now we have a layout for mobiles, let's use a few min-width media queries to override this for bigger screens. You might want to change 600px to a bigger or smaller value? */
+
+@media screen and (min-width: 600px) {
+    /* turn on flexbox for each bio but allow them to go onto more than one line (remove the flex-wrap:wrap to see what happens) */
+    .bio__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /* put the text in each bio on the left rather than centre it. Use the 'flex' command to make each box a third of the width - you could change this to 50% or 25% to see what happens? */
+    .bio__person {
+        text-align: left;
+        flex: 33.333%;
+    }
+}
+
+
+/* styling links */
+
+.text-content ul {
+    /* styling submission links */
+    list-style-type: none;
+}
+
+.text-content ul li {
+    padding: 5px;
+}
+
+.text-content li a {
+    text-decoration: none;
+    color: black;
+}
+
+li a:hover {
+    color: #ff6f44;
+}
+
+.site-footer a {
+    /* styling links in the footer */
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: white;
+}
+
+
+/* footer */
+
+.site-footer {
+    background-color: #e86829;
+}
+
+
+/* call to action button */
+
+a.call-to-action {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 0.2em;
+    background-color: #e86829;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.call-to-action {
+    transition: all 0.3s ease;
+}
+
+a.call-to-action:hover {
+    opacity: 0.8;
+    color: white;
+    background-color: #429fd5;
+    border-color: #429fd5;
+}
+
+
+/* adding a little bit of animation (optional) */
+
+a.call-to-action {
+    transition: all 0.3s ease;
+}
+
+a.call-to-action:hover {
+    opacity: 0.8;
+}
