@@ -21,22 +21,23 @@ html {
 
 .accessibility {
     position: absolute;
-    left: 42%;
+    left: -10px;
     top: -19px;
     background: #E86829;
     width: 150px;
     height: 50px;
     text-align: center;
     border: solid 3px;
-    border-radius: 0 0 25px 25px;
+    border-radius: 0 0 25px 0;
     border-top: 0;
 }
 
 .accessibility a {
     display: inline-block;
     padding: 10px;
-    font-family: 'Permanent Marker', cursive;
-    text-decoration: none;
+    font-family: 'Rosario', sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
     color: #000;
 }
 
@@ -52,20 +53,18 @@ html {
 /* styling everything in the header */
 
 .site-header {
-    height: 50vh;
-    background-image: url("../img/splat-bg.png");
-    background-size: cover;
+    height: 300px;
+    background-image: url("../img/splatpattern.png");
+    background-repeat: repeat;
     color: #e86829;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-/* see and style our header content div */
-
-.site-header__content {
-    min-width: 200px;
+.intro {
+    font-family: 'Rosario', sans-serif;
+    max-width: 550px;
     text-align: center;
 }
 
@@ -75,7 +74,6 @@ html {
 .site-header__content p {
     margin: 0;
     padding: 10px 0 0 0;
-    color: #e86829;
 }
 
 
@@ -100,7 +98,7 @@ html {
 }
 
 .background {
-    background-color: #BBF7FF;
+    background: rgba(232, 104, 41, 0.9);
 }
 
 
@@ -110,13 +108,12 @@ html {
 /* styling profiles of us section */
 
 .bio {
-    border: 1px solid red;
+    background-color: #e8e8e8;
 }
 
 .bio__container {
     max-width: 800px;
     margin: 0 auto;
-    border: 1px solid green;
 }
 
 
@@ -135,7 +132,6 @@ html {
 /* put a temporary(?) border around each bio and add some padding. Centre the text at small screen sizes. */
 
 .bio__person {
-    border: 1px solid blue;
     padding: 10px;
 }
 
@@ -148,11 +144,10 @@ h3 {
 /* make a circular bio image. You should remove the width and height once you have real images added to your site */
 
 .bio__person img {
-    display: inline-block;
+    display: block;
+    margin: auto;
     width: 200px;
     height: 200px;
-    /*--These need removing and images properly sized*/
-    background: white;
     border-radius: 50%;
 }
 
@@ -173,7 +168,7 @@ h3 {
 /* add more padding to the paragraph with a class of description */
 
 .bio__person p.description {
-    padding: 10px 0 30px 0;
+    padding: 10px 10px 30px 10px;
 }
 
 
@@ -192,6 +187,14 @@ h3 {
     }
 }
 
+@media screen and (max-width: 2560px) {
+    /* put the text in each bio on the left rather than centre it. Use the 'flex' command to make each box a third of the width - you could change this to 50% or 25% to see what happens? */
+    .bio__person {
+        text-align: left;
+        flex: 45%;
+    }
+}
+
 
 /* styling links */
 
@@ -202,6 +205,7 @@ h3 {
 
 .text-content ul li {
     padding: 5px;
+    text-decoration: underline;
 }
 
 .text-content li a {
@@ -242,12 +246,9 @@ a.call-to-action {
     font-weight: bold;
 }
 
-a.call-to-action {
-    transition: all 0.3s ease;
-}
+a.call-to-action {}
 
 a.call-to-action:hover {
-    opacity: 0.8;
     color: white;
     background-color: #429fd5;
     border-color: #429fd5;
@@ -255,11 +256,3 @@ a.call-to-action:hover {
 
 
 /* adding a little bit of animation (optional) */
-
-a.call-to-action {
-    transition: all 0.3s ease;
-}
-
-a.call-to-action:hover {
-    opacity: 0.8;
-}
